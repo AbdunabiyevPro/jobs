@@ -1,0 +1,269 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixer old version</title>
+    <link rel="stylesheet" href="{% static '/main.css' %}">
+
+</head>
+<body>
+    <!-- header start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-box">
+                <a href="./index.html" class="header-logo-link">
+                    <img src="{% static  '/img/pixeroldlogo.svg' %}" alt="pixer company old logo" class="header-logo">
+                </a>
+                <nav class="navbar">
+                    <ul class="navbar-list list-styles">
+                        <li class="navbar-item"><a href="./index.html" class="navbar-item-link">Bosh sahifa</a></li>
+                        <li class="navbar-item"><a href="{% url 'users:service'  %}" class="navbar-item-link">Xizmatlar</a></li>
+                        <li class="navbar-item"><a href="#" class="navbar-item-link">Portfolio</a></li>
+                        <li class="navbar-item"><a href="#" class="navbar-item-link">Jamoa</a></li>
+                        <li class="navbar-item"><a href="#" class="navbar-item-link">Blog</a></li>
+                        <li class="navbar-item"><a href="#" class="navbar-item-link">Kontaktlar</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+998909213711" class="header-tel-link">+998 90 921 37 11</a>
+            </div>
+        </div>
+    </header>
+    <!-- header finish -->
+
+    <!-- main start -->
+    <main>
+        <!-- section one start -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro-box">
+                    <div class="intro-text-wrapper">
+                        <h3 class="intro-title">Biznesingizni keyingi bosqichga olib chiqing</h3>
+                        <p class="intro-desc">
+                            Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam
+                            facilisis lacinia ex, eget sollicitudin massa pellentesque in.
+                            Vivamus mattis eros at sem pulvinar
+                        </p>
+                        <a href="{% url 'users:service'  %}" class="intro-link">Xizmatlar bilan tanishish</a>
+                    </div>
+                    <iframe width="458" height="258" src="https://www.youtube.com/embed/w4lDHrD_Izo?si=p-VYRGwWNKDhJv06"
+                    title="YouTube video player" allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- section one finish -->
+
+        <!-- section two start -->
+        <section class="services">
+            <div class="container">
+                <div class="services-title-wrapper">
+                    <h2 class="services-title">Xizmatlar</h2>
+                    <p class="services-desc">
+                        Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex,
+                        eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar
+                    </p>
+                </div>
+                <ul class="services-list list-styles">
+                    <li class="services-item">
+                        <a href="{% url 'users:veb' pk=2  %}" class="services-link">
+                            <img src="{% static  '/img/websaytimg.svg' %}" alt="picture of website" class="services-item-img" height="130">
+                            <h3 class="services-item-title">Vebsayt tuzish</h3>
+                            <p class="services-item-text">lorem ipsum</p>
+                        </a>
+                    </li>
+                    <li class="services-item">
+                        <a href="{% url 'users:telegram' pk=1  %}" class="services-link">
+                            <img src="./{% static  '/img/tgbotimg.svg' %}" alt="picture of telegram bot" class="services-item-img" height="130">
+                            <h3 class="services-item-title">Telegram bot</h3>
+                            <p class="services-item-text">lorem ipsum</p>
+                        </a>
+                    </li>
+                    <li class="services-item">
+                        <a href="{% url 'users:smm' pk=3  %}" class="services-link">
+                            <img src="./{% static  '/img/smmimg.svg' %}" alt="picture of smm" class="services-item-img" height="130">
+                            <h3 class="services-item-title">SMM</h3>
+                            <p class="services-item-text">lorem ipsum</p>
+                        </a>
+                    </li>
+                    <li class="services-item">
+                        <a href="{% url 'users:graphic_designer' pk=4  %}" class="services-link">
+                            <img src="./{% static  '/img/grafikdizaynimg.svg' %}" alt="picture of graphic dizayner" class="services-item-img" height="130">
+                            <h3 class="services-item-title">Grafik dizayn</h3>
+                            <p class="services-item-text">lorem ipsum</p>
+                        </a>
+                    </li>
+                    <li class="services-item">
+                        <a href="{% url 'users:crm' pk=5  %}" class="services-link">
+                            <img src="./{% static  '/img/crmimg.svg' %}" alt="picture of CRM" class="services-item-img" height="130">
+                            <h3 class="services-item-title">CRM tizimlar</h3>
+                            <p class="services-item-text">lorem ipsum</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="services-links-wrapper">
+                    <a href="#" class="services-order-link">Buyurtma berish</a>
+                    <a href="{% url 'users:service'  %}" class="services-service-page-link">Xizmatlar sahifasiga o'tish</a>
+                </div>
+            </div>
+        </section>
+        <!-- section two finish -->
+
+        <!-- section three start -->
+        <section class="ourwork">
+            <div class="container">
+                <div class="ourwork-title-wrapper">
+                    <h2 class="ourwork-title">Biz qanday ishlaymiz?</h2>
+                    <p class="ourwork-desc">
+                        Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis
+                        lacinia ex, eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar
+                    </p>
+                </div>
+                <ul class="ourwork-list list-styles">
+                    <li class="ourwork-item">
+                        <img src="./{% static  '/img/talablarnianiqlash.svg' %}" alt="image" class="ourwork-item-img" width="300" height="278">
+                        <div class="ourwork-item-text-wrapper">
+                            <h3 class="ourwork-item-title">Talablarni aniqlab chiqamiz</h3>
+                            <p class="ourwork-item-desc">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
+                        </div>
+                    </li>
+                    <li class="ourwork-item">
+                        <img src="./{% static  '/img/yechim.svg' %}" alt="image" class="ourwork-item-img" width="300" height="225">
+                        <div class="ourwork-item-text-wrapper">
+                            <h3 class="ourwork-item-title">Bir necha yechimlarni taklif qilamiz</h3>
+                            <p class="ourwork-item-desc">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
+                        </div>
+                    </li>
+                    <li class="ourwork-item">
+                        <img src="./{% static  '/img/loyihauchunvaqt.svg' %}" alt="image" class="ourwork-item-img" width="300" height="259">
+                        <div class="ourwork-item-text-wrapper">
+                            <h3 class="ourwork-item-title">Loyiha uchun vaqt belgilaymiz</h3>
+                            <p class="ourwork-item-desc">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
+                        </div>
+                    </li>
+                    <li class="ourwork-item">
+                        <img src="./{% static  '/img/sifatlibajarish.svg' %}" alt="image" class="ourwork-item-img" width="300" height="172">
+                        <div class="ourwork-item-text-wrapper">
+                            <h3 class="ourwork-item-title">A'lo sifat bilan bajarib topshiramiz</h3>
+                            <p class="ourwork-item-desc">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
+                        </div>
+                    </li>
+                    <li class="ourwork-item">
+                        <img src="./{% static  '/img/qo' %}'llabquvvatlash.svg" alt="image" class="ourwork-item-img" width="300" height="233">
+                        <div class="ourwork-item-text-wrapper">
+                            <h3 class="ourwork-item-title">Qo'llab-quvvatlab boramiz</h3>
+                            <p class="ourwork-item-desc">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="ourwork-link">Buyurtma berish</a>
+            </div>
+        </section>
+        <!-- section three finish -->
+
+        <!-- section four start -->
+        <section class="contact">
+            <div class="container">
+                <div class="contact-title-wrapper">
+                    <h2 class="contact-title">Buyurtma berish</h2>
+                    <p class="contact-desc">
+                        Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex,
+                        eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar
+                    </p>
+                </div>
+                <form action="{% url 'users:register' %}" method="post" autocomplete="off" class="contact-inputs-wrapper">
+                    {% csrf_token %}
+                    <input
+                    type="text"
+                    class="contact-input"
+                    name="name"
+                    aria-label="ismingizni kiriting"
+                    placeholder="Tolig Ism Familyangiz">
+                    <input
+                    type="tel"
+                    class="contact-input"
+                    name="phone_number"
+                    aria-label="telefon raqamingizni kiriting"
+                    placeholder="Telefon raqamingiz">
+                    <input
+                    type="email"
+                    class="contact-input"
+                    name="email"
+                    aria-label="Emailingizni Kiriting"
+                    placeholder="Emailingizni Kiriting">
+                    <input type="text" id="studentName" name="job">
+                        <label for="courses">{{ jobs.title }}
+                            <select id="courses" name="courses" multiple>
+                                {% for jobs in job %}
+                                <option selected  value="{{ job.title }}">{{ jobs.title }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
+                    <input
+                    type="text"
+                    class="contact-input"
+                    name="description"
+                    aria-label="Malumotingizni kiriting"
+                    placeholder="Ozingiz xaqingizda malumot">
+                    <input
+                    type="url"
+                    class="contact-input"
+                    name="telegram_link"
+                    aria-label="Telegram url kiriting"
+                    placeholder="Telegram url kiriting">
+                    <input
+                    type="url"
+                    class="contact-input"
+                    name="part_link"
+                    aria-label="Partfoiloingizni url kiriting"
+                    placeholder="Partfoiloingizni Linkini kiritng">
+                    <button type="submit" class="contact-btn">Jo'natish</button>
+                </form>
+            </div>
+        </section>
+        <!-- section four finish -->
+    </main>
+    <!-- main finish -->
+
+    <!-- footer start -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-box">
+                <div class="footer-text-wrapper">
+                    <p class="footer-text">
+                        Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex,
+                        eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar tincidunt.
+                    </p>
+                </div>
+                <div class="footer-pages-wrapper">
+                    <strong class="footer-box-title">Sayt sahifalari</strong>
+                    <ul class="footer-list list-styles">
+                        <li class="footer-pages-item"><a href="./index.html" class="footer-item-link">Bosh sahifa</a></li>
+                        <li class="footer-pages-item"><a href="{% url 'users:service'  %}" class="footer-item-link">Xizmatlar</a></li>
+                        <li class="footer-pages-item"><a href="#" class="footer-item-link">Portfolio</a></li>
+                        <li class="footer-pages-item"><a href="#" class="footer-item-link">Jamoa</a></li>
+                        <li class="footer-pages-item"><a href="#" class="footer-item-link">Blog</a></li>
+                        <li class="footer-pages-item"><a href="#" class="footer-item-link">Kontaktlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social-wrapper">
+                    <strong class="footer-box-title">Biz internetda</strong>
+                    <ul class="footer-list list-styles">
+                        <li class="footer-social-item">
+                            <a href="https://telegram.org/" target="_blank" class="footer-item-link footer-social-telegram">Telegram</a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a href="https://www.facebook.com/" target="_blank" class="footer-item-link footer-social-facebook">Facebook</a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a href="https://www.instagram.com/" target="_blank" class="footer-item-link footer-social-instagram">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer finish -->
+</body>
+</html>
