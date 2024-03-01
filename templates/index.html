@@ -26,7 +26,6 @@
                         <li class="navbar-item"><a href="#" class="navbar-item-link">Kontaktlar</a></li>
                     </ul>
                 </nav>
-                <a href="tel:+998909213711" class="header-tel-link">+998 90 921 37 11</a>
             </div>
         </div>
     </header>
@@ -67,37 +66,44 @@
                 </div>
                 <ul class="services-list list-styles">
                     <li class="services-item">
-                        <a href="{% url 'users:veb' pk=2  %}" class="services-link">
+                        <a href="{% url 'users:frontend'  %}" class="services-link">
                             <img src="{% static  '/img/websaytimg.svg' %}" alt="picture of website" class="services-item-img" height="130">
-                            <h3 class="services-item-title">Vebsayt tuzish</h3>
+                            <h3 class="services-item-title">Frontend</h3>
                             <p class="services-item-text">lorem ipsum</p>
                         </a>
                     </li>
                     <li class="services-item">
-                        <a href="{% url 'users:telegram' pk=1  %}" class="services-link">
+                        <a href="{% url 'users:backend'  %}" class="services-link">
+                            <img src="{% static  '/img/websaytimg.svg' %}" alt="picture of website" class="services-item-img" height="130">
+                            <h3 class="services-item-title">Backend</h3>
+                            <p class="services-item-text">lorem ipsum</p>
+                        </a>
+                    </li>
+                    <li class="services-item">
+                        <a href="{% url 'users:telegram'  %}" class="services-link">
                             <img src="./{% static  '/img/tgbotimg.svg' %}" alt="picture of telegram bot" class="services-item-img" height="130">
                             <h3 class="services-item-title">Telegram bot</h3>
                             <p class="services-item-text">lorem ipsum</p>
                         </a>
                     </li>
                     <li class="services-item">
-                        <a href="{% url 'users:smm' pk=3  %}" class="services-link">
+                        <a href="{% url 'users:smm' %}" class="services-link">
                             <img src="./{% static  '/img/smmimg.svg' %}" alt="picture of smm" class="services-item-img" height="130">
                             <h3 class="services-item-title">SMM</h3>
                             <p class="services-item-text">lorem ipsum</p>
                         </a>
                     </li>
                     <li class="services-item">
-                        <a href="{% url 'users:graphic_designer' pk=4  %}" class="services-link">
+                        <a href="" class="services-link">
                             <img src="./{% static  '/img/grafikdizaynimg.svg' %}" alt="picture of graphic dizayner" class="services-item-img" height="130">
                             <h3 class="services-item-title">Grafik dizayn</h3>
                             <p class="services-item-text">lorem ipsum</p>
                         </a>
                     </li>
                     <li class="services-item">
-                        <a href="{% url 'users:crm' pk=5  %}" class="services-link">
+                        <a href="" class="services-link">
                             <img src="./{% static  '/img/crmimg.svg' %}" alt="picture of CRM" class="services-item-img" height="130">
-                            <h3 class="services-item-title">CRM tizimlar</h3>
+                            <h3 class="services-item-title">Mobilograf</h3>
                             <p class="services-item-text">lorem ipsum</p>
                         </a>
                     </li>
@@ -161,68 +167,6 @@
             </div>
         </section>
         <!-- section three finish -->
-
-        <!-- section four start -->
-        <section class="contact">
-            <div class="container">
-                <div class="contact-title-wrapper">
-                    <h2 class="contact-title">Buyurtma berish</h2>
-                    <p class="contact-desc">
-                        Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex,
-                        eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar
-                    </p>
-                </div>
-                <form action="{% url 'users:register' %}" method="post" autocomplete="off" class="contact-inputs-wrapper">
-                    {% csrf_token %}
-                    <input
-                    type="text"
-                    class="contact-input"
-                    name="name"
-                    aria-label="ismingizni kiriting"
-                    placeholder="Tolig Ism Familyangiz">
-                    <input
-                    type="tel"
-                    class="contact-input"
-                    name="phone_number"
-                    aria-label="telefon raqamingizni kiriting"
-                    placeholder="Telefon raqamingiz">
-                    <input
-                    type="email"
-                    class="contact-input"
-                    name="email"
-                    aria-label="Emailingizni Kiriting"
-                    placeholder="Emailingizni Kiriting">
-                    <input type="text" id="studentName" name="job">
-                        <label for="courses">{{ jobs.title }}
-                            <select id="courses" name="courses" multiple>
-                                {% for jobs in job %}
-                                <option selected  value="{{ job.title }}">{{ jobs.title }}</option>
-                                {% endfor %}
-                            </select>
-                        </label>
-                    <input
-                    type="text"
-                    class="contact-input"
-                    name="description"
-                    aria-label="Malumotingizni kiriting"
-                    placeholder="Ozingiz xaqingizda malumot">
-                    <input
-                    type="url"
-                    class="contact-input"
-                    name="telegram_link"
-                    aria-label="Telegram url kiriting"
-                    placeholder="Telegram url kiriting">
-                    <input
-                    type="url"
-                    class="contact-input"
-                    name="part_link"
-                    aria-label="Partfoiloingizni url kiriting"
-                    placeholder="Partfoiloingizni Linkini kiritng">
-                    <button type="submit" class="contact-btn">Jo'natish</button>
-                </form>
-            </div>
-        </section>
-        <!-- section four finish -->
     </main>
     <!-- main finish -->
 

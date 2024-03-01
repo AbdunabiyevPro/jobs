@@ -24,13 +24,13 @@
                         <li class="navbar-item"><a href="#" class="navbar-item-link">Kontaktlar</a></li>
                     </ul>
                 </nav>
-                <a href="" class="header-tel-link">Add Information</a>
+                <a href="{% url 'users:telegram_register' %}" class="header-tel-link">Add Information</a>
             </div>
         </div>
     </header>
     <section class="intro">
             <div class="container">
-               {% for telegram in users %}
+               {% for telegram in telegram %}
     <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{ telegram.name }}</h5>

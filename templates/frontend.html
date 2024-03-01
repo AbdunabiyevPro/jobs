@@ -24,20 +24,20 @@
                         <li class="navbar-item"><a href="#" class="navbar-item-link">Kontaktlar</a></li>
                     </ul>
                 </nav>
-                <a href="{% url 'users:backend_register'  %}" class="header-tel-link">Add Information</a>
+                <a href="{% url 'users:front_register' %}" class="header-tel-link">register</a>
             </div>
         </div>
     </header>
     <section class="intro">
             <div class="container">
-               {% for smm_view in smm %}
+               {% for frontend in frontend %}
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{ smm_view.name }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted"><a>{{ smm_view.email }}</a></h6>
-    <p class="card-text">{{ smm_view.description }}</p>
-    <a href="{{ smm_view.telegram_link }}" class="card-link">Telegram</a>
-    <a href="{{ smm_view.part_link }}" class="card-link">Your partfolio Link</a>
+    <h5 class="card-title">{{ frontend.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted"><a>{{ frontend.email }}</a></h6>
+    <p class="card-text">{{ frontend.description }}</p>
+    <a href="{{ frontend.telegram_link }}" class="card-link">Telegram</a>
+    <a href="{{ frontend.part_link }}" class="card-link">Your partfolio Link</a>
   </div>
 </div>
     {% endfor %}
