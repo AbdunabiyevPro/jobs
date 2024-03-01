@@ -39,5 +39,26 @@ class SmmRegistrationForms(forms.ModelForm):
     email = forms.CharField(max_length=128)
 
     class Meta:
-        model = SmmUsersModel
+        model = GraphicDesignerUsersModel
+        fields = '__all__'
+
+
+
+class GraphicRegistrationForms(forms.ModelForm):
+    name = forms.CharField(max_length=128)
+    email = forms.CharField(max_length=128)
+
+    class Meta:
+        model = GraphicDesignerUsersModel
+        fields = '__all__'
+
+
+
+
+class MobilRegistrationForms(forms.ModelForm):
+    name = forms.CharField(max_length=128)
+    email = forms.CharField(max_length=128)
+
+    class Meta:
+        model = MobilografUsersModel
         fields = '__all__'

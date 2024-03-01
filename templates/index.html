@@ -58,10 +58,9 @@
         <section class="services">
             <div class="container">
                 <div class="services-title-wrapper">
-                    <h2 class="services-title">Xizmatlar</h2>
+                    <h2 class="services-title">O'zingizga kerakli bolimni tallang</h2>
                     <p class="services-desc">
-                        Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex,
-                        eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar
+                        O'zingizga kerakli bolimni tallang va oz malumotingizni toldiring va sizga aloqaga chiqshadi
                     </p>
                 </div>
                 <ul class="services-list list-styles">
@@ -94,14 +93,14 @@
                         </a>
                     </li>
                     <li class="services-item">
-                        <a href="" class="services-link">
+                        <a href="{% url 'users:graphic_designer' %}" class="services-link">
                             <img src="./{% static  '/img/grafikdizaynimg.svg' %}" alt="picture of graphic dizayner" class="services-item-img" height="130">
                             <h3 class="services-item-title">Grafik dizayn</h3>
                             <p class="services-item-text">lorem ipsum</p>
                         </a>
                     </li>
                     <li class="services-item">
-                        <a href="" class="services-link">
+                        <a href="{% url 'users:mobil'%}" class="services-link">
                             <img src="./{% static  '/img/crmimg.svg' %}" alt="picture of CRM" class="services-item-img" height="130">
                             <h3 class="services-item-title">Mobilograf</h3>
                             <p class="services-item-text">lorem ipsum</p>

@@ -105,7 +105,7 @@ def telegram_view(request):
 
 def smm_register_view(request):
     if request.method == 'POST':
-        form = TelegramRegistrationForms(request.POST)
+        form = SmmRegistrationForms(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             form.save()
@@ -125,6 +125,52 @@ def smm_view(request):
     }
     return render(request, 'smm.html', context=context)
 
+
+
+def graphic_register_view(request):
+    if request.method == 'POST':
+        form = GraphicRegistrationForms(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            form.save()
+            return render(request, 'graphic-register.html')
+        else:
+            text = form.errors
+            return HttpResponse(text)
+    else:
+        return render(request, 'graphic-register.html')
+
+
+
+def graphic_view(request):
+    graphic = GraphicDesignerUsersModel.objects.all()
+    context = {
+        'graphic': graphic
+    }
+    return render(request, 'graphic-designer.html', context=context)
+
+
+def mobil_register_view(request):
+    if request.method == 'POST':
+        form = MobilRegistrationForms(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            form.save()
+            return render(request, 'mobil-register.html')
+        else:
+            text = form.errors
+            return HttpResponse(text)
+    else:
+        return render(request, 'mobil-register.html')
+
+
+
+def mobil_view(request):
+    mobil = MobilografUsersModel.objects.all()
+    context = {
+        'mobil': mobil
+    }
+    return render(request, 'mobil.html', context=context)
 
 
 

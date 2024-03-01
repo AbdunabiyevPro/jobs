@@ -24,20 +24,20 @@
                         <li class="navbar-item"><a href="#" class="navbar-item-link">Kontaktlar</a></li>
                     </ul>
                 </nav>
-                <a href="" class="header-tel-link">Add Information</a>
+                <a href="{% url 'users:graphic_register' %}" class="header-tel-link">Add Information</a>
             </div>
         </div>
     </header>
     <section class="intro">
             <div class="container">
-               {% for telegram in users %}
+               {% for graphic in graphic %}
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{ telegram.name }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted"><a>{{ telegram.email }}</a></h6>
-    <p class="card-text">{{ telegram.description }}</p>
-    <a href="{{ telegram.telegram_link }}" class="card-link">Telegram</a>
-    <a href="{{ telegram.part_link }}" class="card-link">Your partfolio Link</a>
+    <h5 class="card-title">{{ graphic.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted"><a>{{ graphic.email }}</a></h6>
+    <p class="card-text">{{ graphic.description }}</p>
+    <a href="{{ graphic.telegram_link }}" class="card-link">Telegram</a>
+    <a href="{{ graphic.part_link }}" class="card-link">Your partfolio Link</a>
   </div>
 </div>
     {% endfor %}

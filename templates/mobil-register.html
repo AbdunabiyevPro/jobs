@@ -1,10 +1,52 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="{% static '/main.css' %}">
 </head>
 <body>
-$END$
+                <form action="{% url 'users:mobil_register' %}" method="post" autocomplete="off" class="contact-inputs-wrapper">
+                    {% csrf_token %}
+                    <input
+                    type="text"
+                    class="contact-input"
+                    name="name"
+                    aria-label="ismingizni kiriting"
+                    placeholder="Tolig Ism Familyangiz">
+                    <input
+                    type="tel"
+                    class="contact-input"
+                    name="phone_number"
+                    aria-label="telefon raqamingizni kiriting"
+                    placeholder="Telefon raqamingiz">
+                    <input
+                    type="email"
+                    class="contact-input"
+                    name="email"
+                    aria-label="Emailingizni Kiriting"
+                    placeholder="Emailingizni Kiriting">
+                    <input
+                    type="text"
+                    class="contact-input"
+                    name="description"
+                    aria-label="Malumotingizni kiriting"
+                    placeholder="Ozingiz xaqingizda malumot">
+                    <input
+                    type="url"
+                    class="contact-input"
+                    name="telegram_link"
+                    aria-label="Telegram url kiriting"
+                    placeholder="Telegram url kiriting">
+                    <input
+                    type="url"
+                    class="contact-input"
+                    name="part_link"
+                    aria-label="Partfoiloingizni url kiriting"
+                    placeholder="Partfoiloingizni Linkini kiritng">
+                    <button  type="submit"  class="contact-btn">Jo'natish</button>
+                </form>
+
 </body>
 </html>
